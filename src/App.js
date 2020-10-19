@@ -1,18 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Button, TextField } from '@material-ui/core';
+import { Button, TextField, Select, MenuItem, FormControl, FormHelperText, Container, FormGroup, FormControlLabel } from '@material-ui/core';
 
 function App() {
+
+  const [login, setLoginParameter] = React.useState('');
+
+  const handleChange = (event) => {
+    setLoginParameter(event.target.value);
+    console.log(event.target.value)
+  };
+
   return (
     <div>
-      <h1>Sign into 7Factor Timesheet</h1>
-      <Button color="Primary" variant="contained">
-        This is a button!
-        </Button>
-        <TextField variant="outlined" label="Username:"></TextField>
-        <TextField variant="outlined" label="Password"></TextField>
-
+      <label>Sign Into 7Factor Login</label>
+      
     </div>
   );
 }
