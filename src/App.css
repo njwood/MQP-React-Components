@@ -1,6 +1,22 @@
-div {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.ParentClass {
+    height: 60vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+}
+
+.Children {
+    font-family: cursive;
+}
+
+.Child {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    background-color: #ededed;
 }
