@@ -42,7 +42,7 @@ function App() {
             <Button variant="outlined" className="SubmitButton" color="primary" onClick = {(event) => {
               console.log("Username: " + event.target.value);
               alert("Logging in with credentials: USERNAME - " + username + " PASS - " + password + " Login Type - " + loginMethod);
-            }}> Submit </Button>
+            }} onClick={}> Submit </Button>
           </div> 
         </div>
       </div>
