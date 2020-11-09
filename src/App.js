@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
 import { Button, TextField, Select, FormControl,  InputLabel } from '@material-ui/core';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import TestRender from './TestFile.js';
+import { Link, withRouter, BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
 
   // Placeholders for user input
   let username = '';
   let password = '';
-  let loginMethod = 'AzureAD';
+  let loginMethod = '';
 
   return (
       <div class="ParentClass">
@@ -38,12 +37,14 @@ function App() {
               password = event.target.value;
             }}></TextField>
           </div>
-          <div class="Child">
-            <Button component={Link} to="/src/RouterTest" variant="outlined" className="SubmitButton" color="primary" onClick = {(event) => {
-              //alert("Logging in with credentials: USERNAME - " + username + " PASS - " + password + " Login Type - " + loginMethod);
-              this.history.push('/TestFile')
-            }}> Submit </Button>
-          </div> 
+          <Router>
+            <div class="Child">
+              <Button component={ withRouter(Link) } to="./PeopleCard" variant="outlined" className="SubmitButton" color="primary" onClick = {(event) => {
+                //alert("Logging in with credentials: USERNAME - " + username + " PASS - " + password + " Login Type - " + loginMethod);
+                console.log("Changing Route");
+              }}> Submit </Button>
+            </div> 
+          </Router>
         </div>
       </div>
   );

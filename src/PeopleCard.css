@@ -1,0 +1,15 @@
+.TopRow {
+    justify-content: center;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.MidRow {
+    margin: auto;
+    width: 50%;
+    padding: 0px;
+}
+
+
+

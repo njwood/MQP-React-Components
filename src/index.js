@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
-import history from './history'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import PeopleCard from './PeopleCard';
 
 ReactDOM.render(
-  <Router history={history}>
-    <App />
+  <Router>
+    <Switch>
+      <Route exact path = "/" render ={() => <App />}></Route>
+      <Route exact path="/PeopleCard" render ={() => <PeopleCard />}></Route>
+    </Switch>
   </Router>,
   document.getElementById('root')
 );
