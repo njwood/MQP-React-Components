@@ -1,14 +1,18 @@
 .TopRow {
-    justify-content: center;
     display: flex;
-    vertical-align: middle;
+    justify-content: left;
     align-items: center;
+    text-indent: 10px;
 }
 
 .MidRow {
-    margin: auto;
-    width: 50%;
-    padding: 0px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center; 
+}
+
+.body {
+    margin-top: 10px;
 }
 
 
