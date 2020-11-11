@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Avatar , Card, CardActions, CardContent} from '@material-ui/core';
 import './PeopleCard.css';
+import DefaultAvatar from "./DefaultAvatar.jpg";
 
 // Data to display here is to be obtained through a JSON through the database per user
 // Every instance of the card will make its own db call for the data
@@ -22,7 +23,7 @@ function PeopleCard(props) {
                 <Card varient="outlined" className={classes.root}>
                     <CardContent>
                     <div class="TopRow">
-                        <Avatar alt = "default image" src="./DefaultAvatar.jpg"/>
+                        <Avatar alt = "default image" src={DefaultAvatar}/>
                         <h2> Employee Name </h2>
                     </div>
                     <div class="MidRow">

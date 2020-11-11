@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PeopleCard from './PeopleCard';
+import HomeScreen from './HomeScreen';
 
 ReactDOM.render(
   <Router>
     <Switch>
       <Route exact path = "/" render ={() => <App />}></Route>
       <Route exact path="/PeopleCard" render ={() => <PeopleCard />}></Route>
+      <Route exact path="/HomeScreen" render={() => <HomeScreen />}></Route>
     </Switch>
   </Router>,
   document.getElementById('root')
