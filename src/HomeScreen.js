@@ -14,6 +14,18 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { Avatar } from '@material-ui/core';
 import CompanyLogo from './7factor_logo.png';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import PeopleIcon from '@material-ui/icons/People';
+import BarChartIcon from '@material-ui/icons/BarChart';
+import LayersIcon from '@material-ui/icons/Layers';
+import List from '@material-ui/core/List';
+import HomeIcon from '@material-ui/icons/Home';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import ContactsIcon from '@material-ui/icons/Contacts';
 
 const drawerWidth = 240;
 
@@ -97,6 +109,29 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const mainListItems = (
+  <div>
+    <ListItem button>
+      <ListItemIcon>
+        <HomeIcon />
+      </ListItemIcon>
+      <ListItemText primary="Home" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <AccessTimeIcon />
+      </ListItemIcon>
+      <ListItemText primary="Timesheet" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <ContactsIcon />
+      </ListItemIcon>
+      <ListItemText primary="Employees" />
+    </ListItem>
+  </div>
+);
+
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -145,6 +180,7 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
+        <List>{mainListItems}</List>
         <Divider />
       </Drawer>
       <main className={classes.content}>
