@@ -17,15 +17,11 @@ import CompanyLogo from './7factor_logo.png';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
 import List from '@material-ui/core/List';
 import HomeIcon from '@material-ui/icons/Home';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import ContactsIcon from '@material-ui/icons/Contacts';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -117,7 +113,7 @@ const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to=''>
       <ListItemIcon>
         <AccessTimeIcon />
       </ListItemIcon>

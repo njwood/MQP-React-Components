@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Avatar , Card, CardActions, CardContent} from '@material-ui/core';
+import { Avatar , Card, CardContent} from '@material-ui/core';
 import './PeopleCard.css';
 import DefaultAvatar from "./DefaultAvatar.jpg";
 
