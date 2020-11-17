@@ -21,10 +21,8 @@ import List from '@material-ui/core/List';
 import HomeIcon from '@material-ui/icons/Home';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import ContactsIcon from '@material-ui/icons/Contacts';
-import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -113,7 +111,7 @@ const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItem>
-    <ListItem button component={Link} to=''>
+    <ListItem button>
       <ListItemIcon>
         <AccessTimeIcon />
       </ListItemIcon>
@@ -130,7 +128,7 @@ const mainListItems = (
 
 export default function Dashboard() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
