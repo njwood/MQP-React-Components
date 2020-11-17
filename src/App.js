@@ -37,14 +37,14 @@ function App() {
               password = event.target.value;
             }}></TextField>
           </div>
-          <Router>
             <div class="Child">
-              <Button component={ withRouter(Link) } to="./PeopleCard" variant="outlined" className="SubmitButton" color="primary" onClick = {(event) => {
+            <Router forceRefresh={true}>
+              <Button component={ Link } to="./HomeScreen" variant="outlined" className="SubmitButton" color="primary" onClick = {(event) => {
                 //alert("Logging in with credentials: USERNAME - " + username + " PASS - " + password + " Login Type - " + loginMethod);
                 console.log("Changing Route");
               }}> Submit </Button>
+              </Router>
             </div> 
-          </Router>
         </div>
       </div>
   );
